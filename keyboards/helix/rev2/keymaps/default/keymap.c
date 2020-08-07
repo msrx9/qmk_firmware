@@ -430,7 +430,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if(keymap_config.swap_lalt_lgui==false){
           register_code(KC_LANG2);
         }else{
-          SEND_STRING(SS_LALT("`"));
+          register_code(KC_LCTRL);
+          register_code(KC_LSHIFT);
+          register_code(KC_1);
+          unregister_code(KC_1);
+          unregister_code(KC_LSHIFT);
+          unregister_code(KC_LCTRL);
         }
       } else {
         unregister_code(KC_LANG2);
@@ -442,7 +447,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if(keymap_config.swap_lalt_lgui==false){
           register_code(KC_LANG1);
         }else{
-          SEND_STRING(SS_LALT("`"));
+          register_code(KC_LCTRL);
+          register_code(KC_LSHIFT);
+          register_code(KC_1);
+          unregister_code(KC_1);
+          unregister_code(KC_LSHIFT);
+          unregister_code(KC_LCTRL);
         }
       } else {
         unregister_code(KC_LANG1);
