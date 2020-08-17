@@ -449,8 +449,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }else{
           register_code(KC_LCTRL);
           register_code(KC_LSHIFT);
-          register_code(KC_1);
-          unregister_code(KC_1);
+          register_code(KC_2);
+          unregister_code(KC_2);
           unregister_code(KC_LSHIFT);
           unregister_code(KC_LCTRL);
         }
